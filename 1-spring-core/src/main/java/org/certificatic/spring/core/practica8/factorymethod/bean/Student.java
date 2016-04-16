@@ -14,8 +14,10 @@ public class Student {
 		Student a = new Student();
 		a.setName(name);
 		a.setSubject(new Subject());
+		a.getSubject().setName(materia);
 		a.getSubject().setTeacher(new Teacher());
 		a.getSubject().getTeacher().setName("Ivan");
 		return a;
 	}
+
 }
