@@ -15,4 +15,25 @@
 		<property name="nombre" value="Paco" />
 	</bean>
 
+	<!-- custom scope -->
+	<bean id="customScopeBean"
+		class="org.certificatic.spring.core.practica5.scopes.custom.bean.CustomScope" />
+
+	<!-- configurador -->
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+		<property name="scopes">
+			<map>
+				<entry key="customscope">
+					<ref bean="customScopeBean" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- bean customscope -->
+	<bean id="personaCustomScopeBean"
+		class="org.certificatic.spring.core.practica5.scopes.bean.Persona"
+		scope="customscope">
+	</bean>
+
 </beans>
