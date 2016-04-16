@@ -1,5 +1,7 @@
 package org.certificatic.spring.core.practica7.test.lazyinit;
 
+import org.certificatic.spring.core.practica7.lazyinit.bean.Car;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -23,6 +25,12 @@ public class LazyInitTest {
 	public void lazyInitTest() {
 
 		log.info("lazyInitTest -------------------");
+
+		Car car = applicationContext.getBean(Car.class);
+
+		Assert.assertNotNull(car);
+
+		log.info("car: {}", car);
 
 		((AbstractApplicationContext) applicationContext).close();
 	}
