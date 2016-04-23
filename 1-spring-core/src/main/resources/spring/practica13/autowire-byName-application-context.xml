@@ -6,11 +6,21 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 	<!-- Define bean Car -->
+	<bean class="org.certificatic.spring.core.practica13.autowire.bean.Car"
+		autowire="byName" scope="prototype" />
 
 	<!-- Define bean Engine -->
+	<bean id="engine"
+		class="org.certificatic.spring.core.practica13.autowire.bean.Engine"
+		p:model="V8 Twin Turbo" p:cylinderNumber="8" p:serialNumber="ABC-123-XYZ"
+		scope="prototype" />
 
 	<!-- Define bean WheelGroup -->
-	
+	<bean id="wheelGroup"
+		class="org.certificatic.spring.core.practica13.autowire.bean.WheelGroup"
+		scope="prototype">
+		<property name="wheelList" ref="wheelList" />
+	</bean>
 
 	<util:list id="wheelList" list-class="java.util.ArrayList"
 		scope="prototype">
