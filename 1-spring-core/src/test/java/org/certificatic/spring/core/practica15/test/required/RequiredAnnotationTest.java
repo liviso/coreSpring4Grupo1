@@ -20,7 +20,8 @@ public class RequiredAnnotationTest {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"spring/practica15/annotations-required-application-context.xml");
 
-		Cameraman cameraman = applicationContext.getBean("okCameraman", Cameraman.class);
+		Cameraman cameraman = applicationContext.getBean("okCameraman",
+				Cameraman.class);
 
 		Assert.assertNotNull(cameraman);
 
@@ -37,7 +38,8 @@ public class RequiredAnnotationTest {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"spring/practica15/annotations-required-application-context.xml");
 
-		Cameraman cameraman = applicationContext.getBean("badCameraman", Cameraman.class);
+		Cameraman cameraman = applicationContext.getBean("badCameraman",
+				Cameraman.class);
 
 		Assert.assertNull(cameraman);
 

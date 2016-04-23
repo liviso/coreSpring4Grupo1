@@ -6,8 +6,8 @@ public class Numerical {
 			"cinco", "seis", "siete", "ocho", "nueve" };
 
 	private final String[] DOZENS = { "diez", "once", "doce", "trece",
-			"cuatorce", "quince", "dieciseis", "diecisiete", "dieciocho",
-			"diecinueve", "veinte", "treina", "cuarenta", "cincuenta",
+			"catorce", "quince", "dieciseis", "diecisiete", "dieciocho",
+			"diecinueve", "veinte", "treinta", "cuarenta", "cincuenta",
 			"sesenta", "setenta", "ochenta", "noventa" };
 
 	private final String[] HUNDREDS = { "", "ciento", "doscientos",

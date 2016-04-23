@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 	<!-- Habilita configuración por anotaciones -->
+	<context:annotation-config />
 
 	<!-- Define bean Reporter -->
+	<bean
+		class="org.certificatic.spring.core.practica15.autowired.properties.bean.Reporter" />
 
-	<bean class="java.lang.String">
+	<bean id="reporterName" class="java.lang.String">
 		<constructor-arg>
 			<value>Lara Croft</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="reporterDNI" class="java.lang.String">
+		<constructor-arg>
+			<value>XXX-YYY-ZZZ</value>
 		</constructor-arg>
 	</bean>
 
