@@ -7,5 +7,10 @@
 	<!-- Habilitar component scan -->
 
 	<!-- Define bean Resources -->
+	
+	
+	<!-- Después: define PropertyPlaceholderConfigurer -->
+	
+	<!-- Después: configure un context:property-placeholder -->
 
 </beans>
