@@ -1,5 +1,7 @@
 package org.certificatic.spring.core.practica17.test.stereotypes;
 
+import javax.annotation.Resource;
+
 import org.certificatic.spring.core.practica17.stereotypes.api.IComponentClass;
 import org.certificatic.spring.core.practica17.stereotypes.api.IControllerClass;
 import org.certificatic.spring.core.practica17.stereotypes.api.IRepositoryClass;
@@ -8,25 +10,30 @@ import org.certificatic.spring.core.practica17.stereotypes.api.IServiceClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-// Implementar spring-test
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("classpath:/spring/practica17/component-scan-stereotypes-application-context.xml")
 public class StereotypesBetterTest {
 
+	@Resource
 	private IRestControllerClass restController;
-
+	@Resource
 	private IRestControllerClass restController2;
-
+	@Resource
 	private IServiceClass service;
-
+	@Resource
 	private IServiceClass service2;
-
+	@Resource
 	private IControllerClass controller;
-
+	@Resource
 	private IComponentClass component;
-
+	@Resource
 	private IRepositoryClass repository;
 
 	@Before
